@@ -7,7 +7,7 @@ const openai = new OpenAI({
 const generateQuestions = async () => {
   try {
     const prompt = `
-      Generate 3 coding-related multiple-choice questions suitable for developers of all levels. 
+      Generate 5 coding-related multiple-choice questions suitable for developers of all levels. 
       Each question should have:
       - A question about general programming concepts (not language-specific).
       - 4 answer options, with only one correct.
@@ -22,6 +22,8 @@ const generateQuestions = async () => {
     });
 
     const questions = JSON.parse(response.choices[0].message.content);
+
+    console.log('Generated Questions:', questions);
     return questions;
   } catch (error) {
     console.error('Error generating questions:', error);

@@ -1,4 +1,5 @@
 import QuizAttempt from "../models/quizAttempt";
+import User from "../models/user";
 
 const checkQuizAttempt = async (req, res, next) => {
   const { email } = req.body;
