@@ -4,8 +4,8 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "start": "cd ./server && babel-node src/index.js",
-    "dev": "cd ./server && nodemon src/index.js --exec babel-node"
+    "build": "cd server && babel src --out-dir dist",
+    "start": "node server/dist/index.js"
   },
   "keywords": [],
   "author": "",
